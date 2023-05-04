@@ -16,11 +16,12 @@ const Login = () => {
       );
 
       const data = await response.json();
-      setLoading(false);
+
       setUser(data);
     } catch (err) {
       setError(true);
     }
+    setLoading(false);
   };
 
   return (
